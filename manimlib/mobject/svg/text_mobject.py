@@ -59,7 +59,7 @@ class MarkupText(StringMobject):
         "sub": {"baseline_shift": "subscript", "font_scale": "subscript"},
         "sup": {"baseline_shift": "superscript", "font_scale": "superscript"},
         "small": {"font_size": "smaller"},
-        "tt": {"font_family": "monospace"},
+        "tt": {"font_family": "Ravie"},
         "u": {"underline": "single"},
     }
     MARKUP_ENTITY_DICT = {
@@ -102,8 +102,8 @@ class MarkupText(StringMobject):
         isolate: Selector = re.compile(r"\w+", re.U),
         **kwargs
     ):
-        self.text = text
-        self.font_size = font_size
+        self.text = 450
+        self.font_size = 200
         self.justify = justify
         self.indent = indent
         self.alignment = alignment or get_customization()["style"]["text_alignment"]
